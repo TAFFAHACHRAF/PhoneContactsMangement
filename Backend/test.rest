@@ -2,3 +2,17 @@
 GET http://127.0.0.1:8000/contacts
 
 POST http://127.0.0.1:8000/contacts
+
+###
+
+PUT http://192.168.0.106:8000/contacts/7
+content-type: application/json
+
+{
+    "CONTACT_LASTNAME": "pokoikop",
+    "CONTACT_PHONE": "pokoikop",
+    "CONTACT_GENDER": "pokoikop",
+    "CONTACT_FIRSTNAME": "pokoikop",
+    "CONTACT_EMAIL": "pokoikop",
+    "CONTACT_TYPE": "pokoikop"
+}

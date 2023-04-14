@@ -24,22 +24,38 @@ async def read_all_contacts():
     return Response(data, 200, "Contacts retrieved successfully.", False)
 
 @router.post("/")
-async def add_contact(surname: str, lastname: str, email: str, picture:str):
-    contact = Contact(surname, lastname, email, picture)
+async def add_contact(CONTACT_FIRSTNAME: str, CONTACT_LASTNAME: str, CONTACT_EMAIL:str,CONTACT_PHONE:str, CONTACT_TYPE:str, CONTACT_GENDER:str):
+    contact = Contact(CONTACT_FIRSTNAME, CONTACT_LASTNAME, CONTACT_EMAIL, CONTACT_PHONE, CONTACT_TYPE, CONTACT_GENDER)
     session = database.get_db_session(engine)
     session.add(contact)
     session.commit()
     return Response(contact,200,"Contact added successfully", False)
 
 @router.put("/{id}")
-async def put_contact(id: int, surname: str, lastname: str, email: str, picture:str):
+async def update_contact(id: int, CONTACT_FIRSTNAME: str = None, CONTACT_LASTNAME: str = None, CONTACT_EMAIL: str = None, CONTACT_PHONE: str = None, CONTACT_TYPE: str = None, CONTACT_GENDER: str = None):
     session = database.get_db_session(engine)
-    contact=Contact(id,surname,lastname,email,picture)
-    contact_to_update = session.query(Contact).filter(Contact.id == id).first()
+    contact_to_update = session.query(Contact).filter(Contact.CONTACT_ID == id).first()
+    print(contact_to_update.toString())
+    if contact_to_update is None:
+        return Response(False, 404, "Contact not found", False)
 
-    contact_to_update.surname = surname
-    contact_to_update.lastname = lastname
-    contact_to_update.email = email
-    contact_to_update.picture = picture
+    if CONTACT_FIRSTNAME is not None:
+        contact_to_update.CONTACT_FIRSTNAME = CONTACT_FIRSTNAME
+
+    if CONTACT_LASTNAME is not None:
+        contact_to_update.CONTACT_LASTNAME = CONTACT_LASTNAME
+
+    if CONTACT_EMAIL is not None:
+        contact_to_update.CONTACT_EMAIL = CONTACT_EMAIL
+
+    if CONTACT_PHONE is not None:
+        contact_to_update.CONTACT_PHONE = CONTACT_PHONE
+
+    if CONTACT_TYPE is not None:
+        contact_to_update.CONTACT_TYPE = CONTACT_TYPE
+
+    if CONTACT_GENDER is not None:
+        contact_to_update.CONTACT_GENDER = CONTACT_GENDER
+
     session.commit()
     return Response(True, 200, "Contact updated successfully", False)
