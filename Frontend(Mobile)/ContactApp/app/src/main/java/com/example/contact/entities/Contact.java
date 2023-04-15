@@ -1,5 +1,4 @@
 package com.example.contact.entities;
-import java.util.List;
 
 public class Contact {
     private long CONTACT_ID;
@@ -7,14 +6,14 @@ public class Contact {
     String CONTACT_LASTNAME;
     String CONTACT_EMAIL;
     String CONTACT_PHONE;
-    Type CONTACT_TYPE;
-    Gender CONTACT_GENDER;
+    String CONTACT_TYPE;
+    String CONTACT_GENDER;
 
     public Contact(){
 
     }
 
-    public Contact(long CONTACT_ID, String CONTACT_FIRSTNAME, String CONTACT_LASTNAME, String CONTACT_EMAIL, String CONTACT_PHONE, Type CONTACT_TYPE, Gender CONTACT_GENDER) {
+    public Contact(long CONTACT_ID, String CONTACT_FIRSTNAME, String CONTACT_LASTNAME, String CONTACT_EMAIL, String CONTACT_PHONE, String CONTACT_TYPE, String CONTACT_GENDER) {
         this.CONTACT_ID = CONTACT_ID;
         this.CONTACT_FIRSTNAME = CONTACT_FIRSTNAME;
         this.CONTACT_LASTNAME = CONTACT_LASTNAME;
@@ -74,19 +73,19 @@ public class Contact {
         this.CONTACT_PHONE = CONTACT_PHONE;
     }
 
-    public Type getCONTACT_TYPE() {
+    public String getCONTACT_TYPE() {
         return CONTACT_TYPE;
     }
 
-    public void setCONTACT_TYPE(Type CONTACT_TYPE) {
+    public void setCONTACT_TYPE(String CONTACT_TYPE) {
         this.CONTACT_TYPE = CONTACT_TYPE;
     }
 
-    public Gender getCONTACT_GENDER() {
+    public String getCONTACT_GENDER() {
         return CONTACT_GENDER;
     }
 
-    public void setCONTACT_GENDER(Gender CONTACT_GENDER) {
+    public void setCONTACT_GENDER(String CONTACT_GENDER) {
         this.CONTACT_GENDER = CONTACT_GENDER;
     }
 }

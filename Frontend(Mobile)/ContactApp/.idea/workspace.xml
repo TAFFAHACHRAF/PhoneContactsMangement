@@ -10,60 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba6ead86-b199-49a2-ab4e-ec3fd772ef9f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Backend/endpoints/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Backend/endpoints/contact.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Backend/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Backend/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Backend/models/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Backend/models/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Backend/models/request.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Backend/models/request.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Backend/models/response.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Backend/models/response.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Backend/test.rest" beforeDir="false" afterPath="$PROJECT_DIR$/../../Backend/test.rest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/proguard-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/androidTest/java/com/example/xyz/demoappretrofit/ExampleInstrumentedTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/main/java/com/example/xyz/demoappretrofit/RetroFitApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/main/java/com/example/xyz/demoappretrofit/adapter/MyClientRecyclerViewAdapterNew.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/main/java/com/example/xyz/demoappretrofit/bean/Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/main/java/com/example/xyz/demoappretrofit/bean/ClientData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/main/java/com/example/xyz/demoappretrofit/demoRetrofit/ClientList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/main/java/com/example/xyz/demoappretrofit/helper/Constants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/main/java/com/example/xyz/demoappretrofit/helper/Webservice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/main/res/layout/activity_client_list.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/main/res/layout/app_bar_dashboard.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/main/res/layout/client_item.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/main/res/values/colors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/main/res/values/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/app/src/test/java/com/example/xyz/demoappretrofit/ExampleUnitTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Android-Retrofit-API-request-and-Data-Loading-test/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../retrofit" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +22,14 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="layoutResourceFile" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -93,12 +48,19 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
+    "android-custom-viewC:/Users/R1304/AppData/Local/Android/Sdk/sources/android-33/android/view/View.java_SELECTED": "View",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "C:/Users/R1304/Documents/Projets/ContactsApi/Frontend(Mobile)/ContactApp",
+    "last_opened_file_path": "C:/Users/R1304/Documents/Projets/ContactsApi/Frontend(Mobile)/ContactApp/app/src/main/res/drawable",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\R1304\Documents\Projets\ContactsApi\Frontend(Mobile)\ContactApp\app\src\main\res\drawable" />
+      <recent name="C:\Users\R1304\Documents\Projets\ContactsApi\Frontend(Mobile)\ContactApp\app\src\main\res\layout" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="DistantDB.app.main" />

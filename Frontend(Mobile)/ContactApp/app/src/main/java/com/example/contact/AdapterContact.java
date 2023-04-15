@@ -25,7 +25,7 @@ import java.util.ArrayList;
 public class AdapterContact extends RecyclerView.Adapter<AdapterContact.ContactViewHolder> {
     private Context context;
     private ArrayList<Contact> contactList;
-    String url = "http://192.168.43.250:8000";
+    String url = "http://192.168.0.142:8000";
 
     public AdapterContact(Context context, ArrayList<Contact> contactList) {
         this.context = context;

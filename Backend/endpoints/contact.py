@@ -29,6 +29,7 @@ async def add_contact(CONTACT_FIRSTNAME: str, CONTACT_LASTNAME: str, CONTACT_EMA
     session = database.get_db_session(engine)
     session.add(contact)
     session.commit()
+    print(contact)
     return Response(contact,200,"Contact added successfully", False)
 
 @router.put("/{id}")

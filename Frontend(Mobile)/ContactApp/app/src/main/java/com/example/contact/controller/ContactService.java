@@ -17,9 +17,10 @@ public interface ContactService {
     @GET("/contacts")
     Call<List<Contact>> getAllContacts();
 
-    /*@POST("/contact")
-    Call<Contact> createContact(@Body Contact newContact);
+    @POST("/contacts")
+    Call<Boolean> createContact(@Body Contact newContact);
 
+    /*
     @GET("/contacts/{id}")
     Call<Contact> getContact(@Path("id") Long id);
 

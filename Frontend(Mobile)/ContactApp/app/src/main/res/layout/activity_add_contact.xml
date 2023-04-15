@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
+    app:circularflow_radiusInDP="45" >
+
+    <Button
+        android:id="@+id/add_contact"
+        android:layout_width="238dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="36dp"
+        android:backgroundTint="#7AA6E8"
+        android:drawableTint="#7AA6E8"
+        android:onClick="Signup"
+        android:text="Save"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#7AA6E8"
+        android:textColorLink="#7AA6E8"
+        android:textStyle="bold"
+        app:iconTint="#7AA6E8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CONTACT_GENDER"
+        app:layout_constraintVertical_bias="0.159"
+        app:rippleColor="#7AA6E8"
+        app:strokeColor="#7AA6E8" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_baseline_phone_24" />
+
+    <EditText
+        android:id="@+id/CONTACT_GENDER"
+        android:layout_width="297dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_editext_background"
+        android:ems="10"
+        android:hint="string/gender"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CONTACT_TYPE" />
+
+    <EditText
+        android:id="@+id/CONTACT_FIRSTNAME"
+        android:layout_width="297dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="130dp"
+        android:background="@drawable/rounded_editext_background"
+        android:ems="10"
+        android:hint="string/firstname"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/CONTACT_LASTNAME"
+        android:layout_width="297dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/rounded_editext_background"
+        android:ems="10"
+        android:hint="string/lastname"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CONTACT_FIRSTNAME" />
+
+    <EditText
+        android:id="@+id/CONTACT_EMAIL"
+        android:layout_width="297dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_editext_background"
+        android:ems="10"
+        android:hint="string/email"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CONTACT_LASTNAME" />
+
+    <EditText
+        android:id="@+id/CONTACT_PHONE"
+        android:layout_width="297dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_editext_background"
+        android:ems="10"
+        android:hint="string/phone"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CONTACT_EMAIL" />
+
+    <EditText
+        android:id="@+id/CONTACT_TYPE"
+        android:layout_width="297dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_editext_background"
+        android:ems="10"
+        android:hint="string/type"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CONTACT_PHONE" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

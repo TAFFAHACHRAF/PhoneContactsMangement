@@ -4,10 +4,12 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.contact.controller.ContactService;
@@ -28,8 +30,10 @@ public class MainActivity extends AppCompatActivity {
     private FloatingActionButton btnAdd;
     private RecyclerView listContacts;
     private AdapterContact adapterContact;
-    String url = "http://192.168.43.250:8000";
+    private Button addContact;
+    String url = "http://192.168.0.142:8000";
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,11 +41,15 @@ public class MainActivity extends AppCompatActivity {
         listContacts = findViewById(R.id.contactRv);
         btnAdd = findViewById(R.id.fablab);
         listContacts.setHasFixedSize(true);
+        addContact = findViewById(R.id.add_contact);
+
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Add new contact", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(MainActivity.this,AddContact.class);
+                startActivity(i);
             }
         });
 
@@ -54,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
 
         if ( resultCode == Activity.RESULT_OK) {
             if (data != null && data.getBooleanExtra("data_updated", false)) {
-                // reload the data
                 loadData();
             }
         }
@@ -63,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        loadData(); // refresh data
+        loadData();
     }
     public  void loadData(){
         Retrofit retrofit = new Retrofit.Builder( ).baseUrl(url).addConverterFactory(GsonConverterFactory.create( )).build( );

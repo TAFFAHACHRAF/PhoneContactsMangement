@@ -13,7 +13,6 @@ class Contact(Base):
     CONTACT_GENDER = Column(String, unique=True, nullable=False)
     
 
-
     def __init__(self, CONTACT_FIRSTNAME: str, CONTACT_LASTNAME: str, CONTACT_EMAIL: str, CONTACT_PHONE:str, CONTACT_TYPE:str,CONTACT_GENDER:str):
         self.CONTACT_ID=0
         self.CONTACT_FIRSTNAME = CONTACT_FIRSTNAME
