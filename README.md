@@ -45,3 +45,7 @@ Push your changes to your fork.
 Create a pull request.
 License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
+
+#Architecture
+The project follows a client-server architecture, where the Android app acts as the client and the FastAPI server acts as the backend server. The architecture of the project is shown below:
+![Image description](Architecture.jpg)
