@@ -1,7 +1,9 @@
-from sqlalchemy.orm import declarative_base
+from sqlalchemy.orm import declarative_base 
 from sqlalchemy import Column, Integer, String
 
 Base = declarative_base()
+
+# Contact table
 class Contact(Base):
     __tablename__ = 'CONTACT'
     CONTACT_ID = Column(Integer, primary_key=True, index=True)
