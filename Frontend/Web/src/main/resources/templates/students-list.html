@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      layout:decorate="template">
+<head>
+    <meta charset="UTF-8">
+    <title>Students List</title>
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Fredoka One', cursive;
+        }
+    </style>
+</head>
+<body>
+<div layout:fragment="content" class="my-4">
+    <div class="container h-100 py-5">
+        <div class="card">
+            <div class="card-header text-center">
+                <h3 class="h3 mt-3 mb-4 mx-auto display-6 fw-light ">Students List</h3>
+            </div>
+            <div class="card-body py-4">
+                <div class="row my-1 py-2 w-100 justify-content-between">
+                    <form th:action="@{students}" method="get" class="col-md-5 col-11">
+                        <div class="input-group w-100">
+                            <input type="text" name="keyword" placeholder="Please search here ..." class="form-control"
+                                   id="inputGroupSelect04" th:value="${keyword}"/>
+                            <div style="margin-left: 20px" class="input-group-append">
+                                <button class="btn btn-primary" type="submit">Search</button>
+                            </div>
+                            <input type="hidden" name="size" th:value="${size}">
+                        </div>
+                    </form>
+                </div>
+                <table class="table table-responsive text-center table-hover table-bordered">
+                    <thead>
+                    <tr>
+                        <th><strong style="font-size: 1.2em;">N°</strong></th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Gender</th>
+                        <th>In a good standing</th>
+                        <th>Birth Date</th>
+                        <th sec:authorize="hasAuthority('ADMIN')"><strong>Actions</strong></th>
+                    </tr>
+                    </thead>
+                    <tbody th:with="count=${size}*${currentPage}+1">
+                    <tr th:each="item, stat:${students}">
+                        <td th:text="${count+stat.index}"></td>
+                        <td th:text="${item.getFirstName()}"></td>
+                        <td th:text="${item.getLastName()}"></td>
+                        <td th:text="${item.getEmail()}"></td>
+                        <td th:text="${item.getGender()}"></td>
+                        <td th:text="${item.isInGoodStanding()? 'Yes':'No'}"></td>
+                        <td th:text="${item.getBirthDate()}"></td>
+                        <td sec:authorize="hasAuthority('ADMIN')">
+                            <a type="button" class="btn btn-info"
+                               th:href="@{edit(id=${item.id}, keyword=${keyword}, page=${currentPage}, size=${size})}">Edit</a>
+                            <br><br>
+                            <form th:action="@{delete(id = ${item.id}, keyword=${keyword}, page=${currentPage}, size=${size} )}"
+                                  method="delete">
+                                <Button class="btn btn-danger" type="submit">Delete</Button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr th:if="${ #lists.isEmpty(students)}">
+                        <td colspan="8" class="bg-light">
+                            <i class="fa-solid fa-exclamation"></i>The list is empty !
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-footer">
+                <nav aria-label="Page navigation example mx-center" th:if="${ not #lists.isEmpty(pages)}">
+                    <ul class="pagination justify-content-center">
+                        <li th:if="${ maxPages>1}" th:class="${ currentPage==0? 'page-item disabled':'page-item' }">
+                            <a class="page-link" th:href="@{students( page=0, keyword=${keyword}, size=${size} )}">
+                                <i class="fa-solid fa-backward-step"></i>
+                            </a>
+                        </li>
+                        <li th:if="${ maxPages>1}" th:class="${ currentPage==0? 'page-item disabled':'page-item' }">
+                            <a class="page-link"
+                               th:href="@{students( page=${currentPage}-1, keyword=${keyword}, size=${size} )}">
+                                <i class="fa-solid fa-angle-left"></i>
+                            </a>
+                        </li>
+                        <li th:each="page,status:${pages}"
+                            th:class="${page==currentPage? 'page-item active':'page-item' }">
+                            <a th:text="${page+1}" class="page-link"
+                               th:href="@{students( page=${page}, keyword=${keyword}, size=${size} )}"></a>
+                        </li>
+                        <li th:if="${ maxPages>1}"
+                            th:class="${ (currentPage+1)==(maxPages)? 'page-item disabled':'page-item' }">
+                            <a class="page-link"
+                               th:href="@{students( page=${currentPage}+1,keyword=${keyword}, size=${size} )}">
+                                <i class="fa-solid fa-angle-right"></i>
+                            </a>
+                        </li>
+                        <li th:if="${ maxPages>1}"
+                            th:class="${ (currentPage+1)==(maxPages)? 'page-item disabled':'page-item' }">
+                            <a class="page-link"
+                               th:href="@{students( page=${maxPages}-1,keyword=${keyword}, size=${size} )}">
+                                <i class="fa-solid fa-forward-step"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

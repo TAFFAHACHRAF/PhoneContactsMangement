@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="template">
+<head>
+    <meta charset="UTF-8">
+    <title>Add a new student</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Fredoka One', cursive;
+        }
+    </style>
+</head>
+<body>
+<div layout:fragment="content" class="my-4">
+    <div class="container h-100 py-5">
+        <div class="card">
+            <div class="card-header text-center">
+                <h3 class="h3 mt-3 mb-4 mx-auto display-6 fw-light ">
+                    Add a new student
+                </h3>
+            </div>
+            <form th:action="@{save}" method="post">
+
+                <div class="card-body py-4">
+
+                    <div class="col-8 col-md-6 mx-auto">
+                        <div class="mb-3">
+                            <label for="firstName" class="form-label fw-bold">First Name : </label>
+                            <input type="text" name="firstName" class="form-control" id="firstName"
+                                   th:value="${student.getFirstName()}">
+                            <small class="text-danger" th:errors="${student.firstName}"></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="lastName" class="form-label fw-bold">Last Name : </label>
+                            <input type="text" name="lastName" class="form-control" id="lastName"
+                                   th:value="${student.getLastName()}">
+                            <small class="text-danger" th:errors="${student.lastName}"></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="birthDate" class="form-label fw-bold">Birth Date : </label>
+                            <input type="date" name="birthDate" class="form-control" id="birthDate"
+                                   th:value="${student.getBirthDate()}">
+                            <small class="text-danger" th:errors="${student.birthDate}"></small>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" value="X" name="inGoodStanding"
+                                   th:checked="${student.isInGoodStanding()}"
+                                   id="inGoodStanding">
+                            <label class="form-check-label fw-bold" for="inGoodStanding">
+                                He (She) is in a good standing
+                            </label>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-bold">Email : </label>
+                            <input type="email" name="email" class="form-control" id="email"
+                                   th:value="${student.getEmail()}">
+                            <small class="text-danger" th:errors="${student.email}"></small>
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Gender : </label>
+                            <select name="gender">
+                                <option th:each="item : ${T(com.achraf.taffah.jee.entities.Gender).values()}"
+                                        th:value="${item}" th:text="${item}"></option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="card-footer text-center">
+                    <button type="submit" class="btn btn-success my-2 py-2 px-4">Add Student</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
